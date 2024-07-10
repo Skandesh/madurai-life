@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div className="overflow-hidden">
-      <div className="w-full h-16 flex justify-center items-center relative mt-4 backdrop-blur-xl z-20">
+      <div className="w-full h-16 flex justify-center items-center relative m-2 backdrop-blur-xl z-20">
         <div className="absolute left-0"></div>
         <div className="mx-auto">
           {' '}
-          <h2 className="text-gray-950 text-2xl  font-semibold ">
-            madurai.life
-          </h2>
+          <Link to="/">
+            <h2 className="text-gray-950 text-2xl  font-semibold ">
+              madurai.life
+            </h2>
+          </Link>
         </div>
         <div className="mr-4">
           <svg

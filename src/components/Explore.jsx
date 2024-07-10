@@ -1,6 +1,7 @@
 import bgImg from '../assets/temple.jpg';
 import foodImg from '../assets/food.jpg';
 import cafeImg from '../assets/cafe.jpg';
+import { Link } from 'react-router-dom';
 
 const Category = (props) => {
   return (
@@ -20,9 +21,16 @@ const Explore = () => {
     <div>
       <h1 className="text-gray-950 pl-14 pt-10">Explore:</h1>
       <div className="flex justify-center gap-24  flex-wrap">
-        <Category type="food" image={foodImg} />
-        <Category type="temples" image={bgImg} />
-        <Category type="cafe" image={cafeImg} />
+        <Link to="/category/food">
+          <Category type="food" image={foodImg} />
+        </Link>
+        <Link to="/category/temples">
+          <Category type="temples" image={bgImg} />
+        </Link>
+
+        <Link to="/category/cafe">
+          <Category type="cafe" image={cafeImg} />
+        </Link>
       </div>
     </div>
   );
